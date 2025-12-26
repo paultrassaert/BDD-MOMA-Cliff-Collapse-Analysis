@@ -106,7 +106,7 @@ Despite the challenge of a small dataset ($n=5$ periods, $n=6$ cells), we establ
 
 *(Figure: LOOCV Validation results. **Blue bars** = Observed rates; **Red bars** = Predicted rates on the left-out period.)*
 
-#### 1. Studied Models
+#### Studied Models
 * **LASSO (Poisson + L1 Penalty):** Automatically selects important variables. While theoretically useful for high-dimensional data, it proved **highly unstable** and sensitive to the small sample size ($n=5$) .
 * **Simple Model (2 variables):** Uses two strong predictors with low inter-correlation. While robust and interpretable, it lacks the complexity to handle atypical periods, leading to large errors in some cases .
 * **Composite Model (Score-based):** Aggregates the most correlated variables into a single "risk score" before applying a Poisson regression. This approach proved to be the **most stable**, providing predictions close to observations while minimizing overfitting .
