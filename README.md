@@ -168,7 +168,8 @@ Here is an overview of the project's file organization:
 │   └── indicateurs_explications.pdf    # Detailed definition of variables
 ├── .gitignore
 ├── LICENSE
-└── README.md ```
+└── README.md
+```
 
 ---
 
