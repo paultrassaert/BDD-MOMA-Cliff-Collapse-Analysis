@@ -1,12 +1,11 @@
 # Statistical Analysis & Modeling of Cliff Collapses in Normandy 
 
 ![Status](https://img.shields.io/badge/Status-Completed-success)
-![Python](https://img.shields.io/badge/Python-Data_Processing-blue)
-![R](https://img.shields.io/badge/R-Statistical_Modelling-blue)
 ![Project Type](https://img.shields.io/badge/Project-IMT_Atlantique_Student_Project-blue)
 ![Partner](https://img.shields.io/badge/Partner-LETG_UMR_6554_CNRS-red)
-![Status](https://img.shields.io/badge/Status-Completed-success)
 ![Tools](https://img.shields.io/badge/Tools-Python_%7C_R-green)
+![Python](https://img.shields.io/badge/Python-Data_Processing-blue)
+![R](https://img.shields.io/badge/R-Statistical_Modelling-blue)
 
 > **Project Goal:** Understand and model the meteorological and marine factors triggering cliff collapses (rockfalls) along the Seine-Maritime coast using statistical learning.
 
@@ -26,6 +25,8 @@ Our mission was to process this raw data to explain the variability of collapses
 Identify which variables (rain, waves, tides, geology) best explain the frequency of collapses across:
 1.  **Time:** Quels sont les indicateurs temporels qui expliquent le plus le nombre d'éboulement?
 2.  **Space:** Quels sont les indicateurs spatiaux qui expliquent le plus le nombre d'éboulement?
+
+![Study Area Map](assets/lithologie.png)
 
 
 ---
