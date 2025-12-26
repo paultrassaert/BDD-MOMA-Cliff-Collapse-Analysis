@@ -50,13 +50,13 @@ The dataset aggregates **72 environmental indicators** crossed with **693 cliff 
 
 The data is structured into two main Excel files located in the `data_base/` folder:
 
-### 1. [`indicateurs_R.xlsx`](data_base/indicateurs_R.xlsx) (Temporal Analysis)
+### 1. [`indicateurs_par_periode.csv`](data_base/indicateurs_par_periode.csv) (Temporal Analysis)
 This dataset is designed for time-series analysis (Poisson, ARIMA).
 * **Rows:** 5 temporal periods (2001-2008, 2009-2012, etc.).
 * **Columns:** 70+ variables including aggregated weather and marine data.
 * **Key variables:** `pluie_cum_mm`, `jours_gel`, `energie_houle_cumulee`, `marnage_max` .
 
-### 2. [`indicateurs_par_cellule.xlsx`](data_base/indicateurs_par_cellule.xlsx) (Spatial Analysis)
+### 2. [`indicateurs_par_cellule.csv`](data_base/indicateurs_par_cellule.csv) (Spatial Analysis)
 This dataset focuses on the structural characteristics of the 6 hydro-sedimentary sub-cells.
 * **Rows:** 6 spatial units (e.g., Cap d'Antifer to Fécamp) .
 * **Columns:** Geological and morphological indicators.
