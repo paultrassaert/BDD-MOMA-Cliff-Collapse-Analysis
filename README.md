@@ -98,7 +98,7 @@ To understand threshold effects, we used Classification and Regression Trees.
 
 Despite the challenge of a small dataset ($n=5$ periods, $n=6$ cells), we established robust findings:
 
-### Model Performance & Machine Learning
+### 3. Model Performance & Machine Learning
 
 **Objective:** Predict the annual rate of cliff collapses despite a critical data shortage ($n=5$ temporal periods). We evaluated three modeling approaches using **Leave-One-Out Cross-Validation (LOOCV)** to assess out-of-sample performance .
 
@@ -138,6 +138,63 @@ To improve prediction accuracy and operational utility, we identified three key 
 * **Diagnostic Tool:** Develop an automatic alert system based on the critical thresholds identified by our CART analysis (e.g., Cumulative Rain > 3000mm & High Tidal Range).
 * [**Dynamic Mapping:** Create **dynamic probability maps** to visualize rockfall risks in real-time based on incoming weather forecast.
 ---
+BDD-MOMA-Cliff-Collapse-Analysis/
+│
+├── data_base/                        # Input Data for Models
+│   ├── indicateurs_par_cellule.csv     # Spatial dataset (n=6 hydro-sedimentary cells)
+│   └── indicateurs_par_periode.csv     # Temporal dataset (n=5 time periods)
+│
+├── code-python-notebook/             # Data Pipeline: Cleaning & Feature Engineering
+│   ├── code_eboulements.py             # Processing raw cliff collapse events
+│   ├── code_indicateurs_meteo.py       # Aggregating rainfall and temperature data
+│   ├── codeetatdemer.py                # Computing wave energy and sea states
+│   ├── marnage.py                      # Tidal range calculations
+│   └── code_correlation.ipynb          # Jupyter Notebook for initial correlation analysis
+│
+├── code-R/                           # Statistical Modeling & Machine Learning
+│   ├── Poisson.r                       # Poisson Regression models
+│   ├── Binomial_négatif.r              # Negative Binomial models (overdispersion handling)
+│   ├── methode_CART_période.r          # Decision Trees (Temporal analysis)
+│   ├── methode_CART_cellule.r          # Decision Trees (Spatial analysis)
+│   ├── modele_pred_regularise.R        # Composite Model (Lasso/Score) & LOOCV Validation
+│   └── comparaison_régression.r        # Comparing model performance
+│
+├── docs/                             # Documentation
+│   └── indicateurs_explications.pdf    # Detailed dictionary of the 72 variables
+│
+└── assets/                           # Figures and plots used in this README
+
+---
+## 📂 Repository Structure
+
+Here is an overview of the project's file organization:
+
+```text
+.
+├── 📁 assets/                          # Images used in this README (plots, maps)
+│   ├── lithologie.png
+│   ├── correlation.png
+│   └── ...
+├── 📁 code-R/                          # R scripts for statistical modeling
+│   ├── analyse_bdmoma.R                # Exploratory Data Analysis (EDA)
+│   ├── Poisson.r / Binomial_négatif.r  # Regression models
+│   ├── methode_CART_*.r                # Decision trees (temporal & spatial)
+│   └── modele_pred_regularise.R        # LASSO & LOOCV validation
+├── 📁 code-python-notebook/            # Python scripts for Data Engineering (ETL)
+│   ├── code_correlation.ipynb          # Jupyter Notebook for visualization
+│   ├── codeetatdemer.py                # Swell data extraction (CANDHIS)
+│   ├── marnage.py                      # Tide coefficient processing
+│   └── code_indicateurs_meteo.py       # Weather indicators calculation
+├── 📁 data_base/                       # Processed datasets (Clean CSVs)
+│   ├── indicateurs_par_periode.csv     # Input for temporal analysis
+│   └── indicateurs_par_cellule.csv     # Input for spatial analysis
+├── 📁 docs/                            # Project documentation
+│   └── indicateurs_explications.pdf    # Detailed definition of variables
+├── .gitignore
+├── LICENSE
+└── README.md
+---
+
 ## Authors
 
 This project was carried out by **Group 7** from the Engineering program at **IMT Atlantique** (Brest, France), as part of the "Commande Entreprise" semester project (2025-2026).
