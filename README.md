@@ -76,7 +76,7 @@ The features are grouped into 6 categories covering all physical drivers:
 | **Morphology** | Cliff structure | `taux_de_recul`, `pente_falaise` |
 | **Extremes** | Storm events | `surcote` (storm surge), `run_up_max` |
 
-> ℹ️ *For detailed definitions, units, and calculation methods, please refer to the full documentation: [`docs/Indicateurs_explications.pdf`](docs/Indicateurs_explications.pdf).*
+> ℹ️ *For detailed definitions, units, and calculation methods, please refer to the full documentation: [`docs/indicateurs_explications.pdf`](docs/indicateurs_explications.pdf).*
 
 ---
 ## Results & Conclusions
