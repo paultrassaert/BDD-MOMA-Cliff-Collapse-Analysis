@@ -23,8 +23,8 @@ Our mission was to process this raw data to explain the variability of collapses
 
 **The Challenge:**
 Identify which variables (rain, waves, tides, geology) best explain the frequency of collapses across:
-1.  **Time:** Quels sont les indicateurs temporels qui expliquent le plus le nombre d'éboulement?
-2.  **Space:** Quels sont les indicateurs spatiaux qui expliquent le plus le nombre d'éboulement?
+1.  **Time:** Which temporal indicators best explain the number of rockfalls?
+2.  **Space:** Which spatial indicators best explain the number of rockfalls?
 
 ![Study Area Map](assets/lithologie.png)
 
@@ -85,12 +85,14 @@ The features are grouped into 6 categories covering all physical drivers:
 We identified strong correlations between collapse rates and storm-related indicators.
 
 ![Correlation Graph](assets/correlation.png)
+
 Strong positive correlation ($r \approx 0.8$) found with days of strong wind (>60 km/h) and cumulative wind energy.*
 
 ### 2. Decision Trees (CART Method)
 To understand threshold effects, we used Classification and Regression Trees.
 
 ![CART Tree](assets/cart_temporel.png)
+
 *The model highlights that **cumulative rainfall** (> 3000mm) and **tidal range** are the primary splitters for high-risk periods.*
 
 
@@ -101,6 +103,7 @@ Despite the challenge of a small dataset ($n=5$ periods, $n=6$ cells), we establ
 **Objective:** Predict the annual rate of cliff collapses despite a critical data shortage ($n=5$ temporal periods). We evaluated three modeling approaches using **Leave-One-Out Cross-Validation (LOOCV)** to assess out-of-sample performance .
 
 ![Model Predictions](assets/machine_learning_prediction.png)
+
 *(Figure: LOOCV Validation results. **Blue bars** = Observed rates; **Red bars** = Predicted rates on the left-out period.)*
 
 #### 1. Studied Models
