@@ -169,6 +169,39 @@ Here is an overview of the project's file organization:
 ├── .gitignore
 ├── LICENSE
 └── README.md '''
+
+
+## 📂 Repository Structure
+
+Here is an overview of the project's file organization:
+
+```text
+.
+├── 📁 assets/                          # Images used in this README (plots, maps)
+│   ├── lithologie.png
+│   ├── correlation.png
+│   └── ...
+├── 📁 code-R/                          # R scripts for statistical modeling
+│   ├── Poisson.r                       # Poisson Regression models
+│   ├── Binomial_négatif.r              # Negative Binomial models (overdispersion handling)
+│   ├── methode_CART_période.r          # Decision Trees (Temporal analysis)
+│   ├── methode_CART_cellule.r          # Decision Trees (Spatial analysis)
+│   ├── modele_pred_regularise.R        # Composite Model (Lasso/Score) & LOOCV Validation
+│   └── comparaison_régression.r        # Comparing model performance
+├── 📁 code-python-notebook/            # Python scripts for Data Engineering
+│   ├── code_eboulements.py             # Processing raw cliff collapse events
+│   ├── code_correlation.ipynb          # Jupyter Notebook for visualization of correlation
+│   ├── codeetatdemer.py                # Swell data extraction (CANDHIS)
+│   ├── marnage.py                      # Tide coefficient processing
+│   └── code_indicateurs_meteo.py       # Weather indicators calculation
+├── 📁 data_base/                       # Processed datasets (Clean CSVs)
+│   ├── indicateurs_par_periode.csv     # Input for temporal analysis
+│   └── indicateurs_par_cellule.csv     # Input for spatial analysis
+├── 📁 docs/                            # Project documentation
+│   └── indicateurs_explications.pdf    # Detailed definition of variables
+├── .gitignore
+├── LICENSE
+└── README.md
 ---
 
 ## Authors
