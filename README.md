@@ -138,34 +138,7 @@ To improve prediction accuracy and operational utility, we identified three key 
 * **Diagnostic Tool:** Develop an automatic alert system based on the critical thresholds identified by our CART analysis (e.g., Cumulative Rain > 3000mm & High Tidal Range).
 * [**Dynamic Mapping:** Create **dynamic probability maps** to visualize rockfall risks in real-time based on incoming weather forecast.
 ---
-BDD-MOMA-Cliff-Collapse-Analysis/
-│
-├── data_base/                        # Input Data for Models
-│   ├── indicateurs_par_cellule.csv     # Spatial dataset (n=6 hydro-sedimentary cells)
-│   └── indicateurs_par_periode.csv     # Temporal dataset (n=5 time periods)
-│
-├── code-python-notebook/             # Data Pipeline: Cleaning & Feature Engineering
-│   ├── code_eboulements.py             # Processing raw cliff collapse events
-│   ├── code_indicateurs_meteo.py       # Aggregating rainfall and temperature data
-│   ├── codeetatdemer.py                # Computing wave energy and sea states
-│   ├── marnage.py                      # Tidal range calculations
-│   └── code_correlation.ipynb          # Jupyter Notebook for initial correlation analysis
-│
-├── code-R/                           # Statistical Modeling & Machine Learning
-│   ├── Poisson.r                       # Poisson Regression models
-│   ├── Binomial_négatif.r              # Negative Binomial models (overdispersion handling)
-│   ├── methode_CART_période.r          # Decision Trees (Temporal analysis)
-│   ├── methode_CART_cellule.r          # Decision Trees (Spatial analysis)
-│   ├── modele_pred_regularise.R        # Composite Model (Lasso/Score) & LOOCV Validation
-│   └── comparaison_régression.r        # Comparing model performance
-│
-├── docs/                             # Documentation
-│   └── indicateurs_explications.pdf    # Detailed dictionary of the 72 variables
-│
-└── assets/                           # Figures and plots used in this README
-
----
-## 📂 Repository Structure
+## Repository Structure
 
 Here is an overview of the project's file organization:
 
@@ -176,12 +149,15 @@ Here is an overview of the project's file organization:
 │   ├── correlation.png
 │   └── ...
 ├── 📁 code-R/                          # R scripts for statistical modeling
-│   ├── analyse_bdmoma.R                # Exploratory Data Analysis (EDA)
-│   ├── Poisson.r / Binomial_négatif.r  # Regression models
-│   ├── methode_CART_*.r                # Decision trees (temporal & spatial)
-│   └── modele_pred_regularise.R        # LASSO & LOOCV validation
-├── 📁 code-python-notebook/            # Python scripts for Data Engineering (ETL)
-│   ├── code_correlation.ipynb          # Jupyter Notebook for visualization
+│   ├── Poisson.r                       # Poisson Regression models
+│   ├── Binomial_négatif.r              # Negative Binomial models (overdispersion handling)
+│   ├── methode_CART_période.r          # Decision Trees (Temporal analysis)
+│   ├── methode_CART_cellule.r          # Decision Trees (Spatial analysis)
+│   ├── modele_pred_regularise.R        # Composite Model (Lasso/Score) & LOOCV Validation
+│   └── comparaison_régression.r        # Comparing model performance
+├── 📁 code-python-notebook/            # Python scripts for Data Engineering
+│   ├── code_eboulements.py             # Processing raw cliff collapse events
+│   ├── code_correlation.ipynb          # Jupyter Notebook for visualization of correlation
 │   ├── codeetatdemer.py                # Swell data extraction (CANDHIS)
 │   ├── marnage.py                      # Tide coefficient processing
 │   └── code_indicateurs_meteo.py       # Weather indicators calculation
@@ -192,7 +168,7 @@ Here is an overview of the project's file organization:
 │   └── indicateurs_explications.pdf    # Detailed definition of variables
 ├── .gitignore
 ├── LICENSE
-└── README.md
+└── README.md '''
 ---
 
 ## Authors
