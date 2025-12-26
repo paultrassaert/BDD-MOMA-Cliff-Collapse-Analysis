@@ -50,7 +50,7 @@ The dataset aggregates **72 environmental indicators** crossed with **693 cliff 
 
 The data is structured into two main CSV/Excel files located in `data/processed/`:
 
-### 1. `indicateurs_pour_R.csv` (Temporal Analysis)
+### 1. `indicateurs_R.csv` (Temporal Analysis)
 This dataset is designed for time-series analysis (Poisson, ARIMA).
 * **Rows:** 5 temporal periods (2001-2008, 2009-2012, etc.).
 * **Columns:** 70+ variables including aggregated weather and marine data.
