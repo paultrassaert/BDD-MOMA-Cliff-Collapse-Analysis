@@ -6,7 +6,7 @@
 ![Project Type](https://img.shields.io/badge/Project-IMT_Atlantique_Student_Project-blue)
 ![Partner](https://img.shields.io/badge/Partner-LETG_UMR_6554_CNRS-red)
 ![Status](https://img.shields.io/badge/Status-Completed-success)
-![Tools](https://img.shields.io/badge/Tools-Python_%7C_R-green
+![Tools](https://img.shields.io/badge/Tools-Python_%7C_R-green)
 
 > **Project Goal:** Understand and model the meteorological and marine factors triggering cliff collapses (rockfalls) along the Seine-Maritime coast using statistical learning.
 
